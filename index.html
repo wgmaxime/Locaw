@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Maxime CAVERIVIERE</title>
+		<title>Locaw - Location de véhicules de service 100% en ligne !</title>
 		<style>
 			@font-face {font-family: "Sen";src: url("fonts/Sen-Regular.ttf") format("ttf")}
 			body{font-family: Sen; margin: 0;}
@@ -14,8 +14,11 @@
 			label{display: flex;position: relative;margin: 15px 0; height: 55px; background-color: white;border: 1px solid #F7F7F7; box-sizing: border-box; box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.1);border-radius: 5px; width: 325px;}
 			label p{display: flex;position: absolute; left: 58px; pointer-events: none; color: #18CFAE; transition: 350ms ease;}
 			label img{padding: 0 18px;}
-			label input{width: -webkit-fill-available; outline: none; border: none;border-radius: 5px;}
+			label input{width: -webkit-fill-available; outline: none; border: none;border-radius: 5px; font-size: 18px;}
 			label input.active + p{transform: translateY(-34px); font-size: 13px; transform-origin: left top;}
+			label img.show-mp{position: absolute; right: 15px; top: 15px; transition: 100ms ease; opacity: 0; cursor: pointer; padding: 10px;}
+			label img.show-mp.active{opacity: 1;}
+			label img#show-mp-1{top: 11px;}
 			button{margin: 15px 0; height: 55px;border-radius: 5px; border:none; background-color: #18CFAE;width: 325px;color: white;font-size: 15px; outline: none; cursor: pointer;transition: 350ms ease;}
 			button:hover{background-color:#15AA8F;}
 			footer{position: fixed;bottom: 50px; left: 0; text-align: center; width: 100%; font-size: 13px; opacity: 0.7}
@@ -34,7 +37,9 @@
 				</label>
 				<label>
 					<img src="img/picto-cadena.svg">
-					<input type="text" name="identifiant">
+					<img src="img/yeux-open.svg" class="show-mp" id="show-mp-1">
+					<img src="img/yeux-close.svg" class="show-mp active" id="show-mp-2">
+					<input type="password" name="identifiant">
 					<p>mot de passe</p>
 				</label>
 				<button>
@@ -50,6 +55,7 @@
 		<script type="text/javascript">
 
 			var input = document.querySelectorAll('input');
+			var showMp = document.querySelectorAll('.show-mp');
 
 			for (var i = 0; i < input.length; i++) {
 			    input[i].addEventListener('focus', function(event) {
@@ -59,6 +65,20 @@
 			    	if (event.target.value == "") {
 			    		event.target.classList.remove('active');
 			    	}
+			    });
+			}
+			for (var i = 0; i < showMp.length; i++) {
+			    showMp[i].addEventListener('click', function(event) {
+			        if (event.target.nextSibling.nextSibling.getAttribute('type') == "password") {
+			        	document.querySelector('#show-mp-1').classList.add('active')
+			        	document.querySelector('#show-mp-2').classList.remove('active')
+			        	event.target.nextSibling.nextSibling.setAttribute('type', 'text');
+			        }else{
+			        	document.querySelector('#show-mp-2').classList.add('active')
+			        	document.querySelector('#show-mp-1').classList.remove('active')
+			        	event.target.nextSibling.nextSibling.setAttribute('type', 'password');
+			        }
+			        
 			    });
 			}
 
