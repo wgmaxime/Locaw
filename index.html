@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Location de véhicules de service 100% en ligne !">
 		<title>Locaw - Location de véhicules de service 100% en ligne !</title>
 		<style>
 			@font-face {font-family: "Sen";src: url("fonts/Sen-Regular.ttf") format("ttf")}
 			body{font-family: Sen; margin: 0;}
-			section.connexion{width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-position: top center; background-repeat: no-repeat; background-size: contain;}
+			main{width: 100vw; height: 100vh;display: flex; flex-direction: column; justify-content: center; align-items: center; background-position: top center; background-repeat: no-repeat; background-size: contain;}
+			section{display: flex; flex-direction: column; justify-content: center; align-items: center; }
 			.logo{margin-bottom: 20px;}
 			.slogan{margin-bottom: 35px; font-size: 20px; text-align: center;}
 			.slogan strong{color: #18CFAE;}
@@ -26,20 +28,20 @@
 	</head>
 	<body>
 
-		<main>
-			<section class="connexion" style="background-image: url(img/bg-connexion.png)">
-				<img src="img/logo.svg" class="logo">
+		<main style="background-image: url(img/bg-connexion.png)">
+			<img src="img/logo.svg" class="logo" alt="Logo Locaw">
+			<section class="connexion" >
 				<p class="slogan">Location de véhicules de service <br> <strong>100% en ligne !</strong></p>
 				<label>
-					<img src="img/picto-identifiant.svg">
+					<img src="img/picto-identifiant.svg" alt="Pictogramme identifiant">
 					<input type="text" name="identifiant" onfocus="focus(this)">
 					<p>identifiant</p>
 				</label>
 				<label>
-					<img src="img/picto-cadena.svg">
-					<img src="img/yeux-open.svg" class="show-mp" id="show-mp-1">
-					<img src="img/yeux-close.svg" class="show-mp active" id="show-mp-2">
-					<input type="password" name="identifiant">
+					<img src="img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
+					<img src="img/yeux-open.svg" class="show-mp" id="show-mp-1" alt="Pictogramme voir le mot de passe">
+					<img src="img/yeux-close.svg" class="show-mp active" id="show-mp-2" alt="Pictogramme masquer le mot de passe">
+					<input type="password" name="password">
 					<p>mot de passe</p>
 				</label>
 				<button>
