@@ -1,10 +1,11 @@
 @font-face {font-family: "Sen";src: url("./fonts/Sen-Regular.ttf") format("ttf")}
 body{font-family: Sen; margin: 0;}
-main{width: 100vw; height: 100vh;display: flex; flex-direction: column; justify-content: center; align-items: center; background-position: top center; background-repeat: no-repeat; background-size: contain;}
+main{width: 100vw; height: 100vh;background-image: url(./img/bg-connexion.png);display: flex; flex-direction: column; justify-content: center; align-items: center; background-position: top center; background-repeat: no-repeat; background-size: contain;}
 section{display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .logo{margin-bottom: 20px;}
 .slogan{margin-bottom: 35px; font-size: 20px; text-align: center;}
 .slogan strong{color: #18CFAE;}
+.slogan em{font-size: 12px;}
 label{display: flex;position: relative;margin: 15px 0; height: 55px; background-color: white;border: 1px solid #F7F7F7; box-sizing: border-box; box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.1);border-radius: 5px; width: 325px;}
 label p{display: flex;position: absolute; left: 58px; pointer-events: none; color: #18CFAE; transition: 350ms ease;}
 label img{padding: 0 18px;}

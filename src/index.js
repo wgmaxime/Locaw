@@ -38,11 +38,9 @@ for (var i = 0; i < showMp.length; i++) {
 
 moment.locale('fr')  
 
-const element = document.createElement('p'); 
+const element = document.querySelector('.slogan em'); 
 
 element.innerHTML =  
 `Le cours a commencé :  
 ${moment("2020 04 27, 8:00:00 am", "YYYY MM DD, h:mm:ss a")   
 	.fromNow()}`; 
-
-document.body.appendChild(element);
