@@ -1,0 +1,37 @@
+{
+  "name": "Locaw",
+  "version": "1.0.0",
+  "description": "Location de véhicules de service 100% en ligne ! ## Links Lien vers les maquettes `Figma` : [Maquettes Locaw](https://www.figma.com/file/JpXO5OeMwtnLK90AjEdVtb/Locaw?node-id=0%3A1)",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "dev": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wgmaxime/Locaw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wgmaxime/Locaw/issues"
+  },
+  "homepage": "https://github.com/wgmaxime/Locaw#readme",
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
