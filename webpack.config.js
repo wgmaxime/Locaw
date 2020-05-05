@@ -2,11 +2,12 @@ const path = require('path');  
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {   
 	entry: './src/index.js',   
 	output: {     
-		filename: 'bundle.js',     
+		filename: '[name].[contentHash].js',     
 		path: path.resolve(__dirname, 'dist'),   
 	}, 
 	module: {
@@ -36,7 +37,8 @@ module.exports = { 
 		    },
 		],
 	},
-	plugins: [    
+	plugins: [
+		new CleanWebpackPlugin(),    
 		new HtmlWebpackPlugin({     
 			template: './src/index.html',     
 			inject: true,     
