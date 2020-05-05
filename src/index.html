@@ -10,12 +10,43 @@
 
 		<main>
 			<img src="./img/logo.svg" class="logo" alt="Logo Locaw">
-			<section class="connexion" >
+
+			<section class="connexion">
 				<p class="slogan">Location de véhicules de service <br> <strong>100% en ligne !</strong><br><em></em></p>
+				<label>
+					<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
+					<input type="text" name="identifiant_co" onfocus="focus(this)">
+					<p>identifiant</p>
+				</label>
+				<label>
+					<img src="./img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
+					<img src="./img/yeux-open.svg" class="show-mp" id="show-mp-1" alt="Pictogramme voir le mot de passe">
+					<img src="./img/yeux-close.svg" class="show-mp active" id="show-mp-2" alt="Pictogramme masquer le mot de passe">
+					<input type="password" name="password_co">
+					<p>mot de passe</p>
+				</label>
+				<button type="submit">
+					Connexion
+				</button>
+				<a href="">Incription</a>
+			</section>
+
+			<section class="inscription">
+				<p class="slogan">Inscription</strong></p>
 				<label>
 					<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
 					<input type="text" name="identifiant" onfocus="focus(this)">
 					<p>identifiant</p>
+				</label>
+				<label>
+					<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
+					<input type="text" name="name" onfocus="focus(this)">
+					<p>nom</p>
+				</label>
+				<label>
+					<img src="./img/picto-email.svg" alt="Pictogramme identifiant">
+					<input type="email" name="email" onfocus="focus(this)">
+					<p>e-mail</p>
 				</label>
 				<label>
 					<img src="./img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
@@ -25,9 +56,11 @@
 					<p>mot de passe</p>
 				</label>
 				<button type="submit">
-					Connexion
+					S'inscrire
 				</button>
+				<a href="">Connexion</a>
 			</section>
+
 		</main>
 
 		<footer>
