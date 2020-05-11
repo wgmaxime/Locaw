@@ -16,8 +16,8 @@ label input{width: -webkit-fill-available; outline: none; border: none;border-ra
 label input.active + p{transform: translateY(-34px); font-size: 13px; transform-origin: left top;}
 label img.show-mp{position: absolute; right: 15px; top: 15px; transition: 100ms ease; opacity: 0; cursor: pointer; padding: 10px;}
 label img.show-mp.active{opacity: 1;}
-label img#show-mp-1{top: 11px;}
-button{margin: 15px 0; height: 55px;border-radius: 5px; border:none; background-color: #18CFAE;width: 325px;color: white;font-size: 15px; outline: none; cursor: pointer;transition: 350ms ease;}
+label img#y-open{top: 11px;}
+button{margin: 15px 0; height: 55px;border-radius: 5px; border:none; background-color: #18CFAE;width: 325px;color: #484343;font-size: 15px; outline: none; cursor: pointer;transition: 350ms ease; font-weight: bold;}
 button:hover{background-color:#15AA8F;}
 footer{position: fixed;bottom: 50px; left: 0; text-align: center; width: 100%; font-size: 13px; opacity: 0.7}
 
