@@ -50,11 +50,14 @@ for (var i = 0; i < showMp.length; i++) {
 const delayInMillisecond = 1000;
 const email = "hello@lp.wd";
 const password = "qwerty";
+var newEmail = "";
+var newPassword = "";
+var finishRegister = false;
 
 /* -- */
 const onLoginSubmit = e => {
     e.preventDefault();
-    pendingState(e.target);
+    startPendingState(e.target);
 
     setTimeout(() => {
         stopPendingState();
@@ -70,7 +73,7 @@ const startPendingState = (target) => {
     const loading = document.querySelector("#login #loading");
 
     button.setAttribute('disabled', '');
-    loading.classList.remove('hidden');
+    //loading.classList.remove('hidden');
 }
 
 const stopPendingState = () =>{
@@ -78,11 +81,11 @@ const stopPendingState = () =>{
     const loading = document.querySelector("#login #loading");
 
     button.removeAttribute('disabled');
-    loading.classList.remove('hidden');
+    //loading.classList.remove('hidden');
 }
 
 const processData = data => {
-    if (data.get('password_co') === password && data.get('identifiant_co') === email) {
+    if (data.get('password_co') === password && data.get('identifiant_co') === email || data.get('password_co') === newPassword && data.get('identifiant_co') === newEmail) {
         sucessMessage();
     }else{
         errorMessage();
@@ -94,7 +97,7 @@ const errorMessage = () => {
 }
 
 const sucessMessage = () => {
-    
+    alert("Bravo vous êtes connecté")
 }
 
 /* -- */
@@ -133,10 +136,44 @@ document.querySelectorAll('.prev').forEach(item => {
 
 function watchStep(event){
     document.getElementById("step-"+registerStep).style.display = "none";
-    if (event == "next") {registerStep++;}
-    if (event == "prev") {registerStep--;}
+    if (registerStep == 4) {
+        document.getElementById("modalRegister").style.display = "none";
+        finishRegister = true;
+        console.log(newPassword)
+        console.log(newEmail)
+    }
+    if (registerStep == 3) {
+        newEmail = document.querySelector("input[name='email_re']").value;
+        newPassword = document.querySelector("input[name='password_re']").value;
+        if (email != "" && password != "") {
+            registerStep++;
+        }
+    }
+    if (registerStep == 2) {
+        var born = document.querySelector("input[name='born_re']").value;
+        var job = document.querySelector("textarea[name='job_re']").value;
+        console.log(job)
+        if (born != "" && job != "") {
+            registerStep++;
+        }
+    }
+    if (registerStep == 1) {
+        var name = document.querySelector("input[name='name_re']").value;
+        var lastname = document.querySelector("input[name='lastname_re']").value;
+        var adress = document.querySelector("input[name='adress_re']").value;
+        if (name != "" && lastname != "" && adress != "") {
+            registerStep++;
+        }
+    }
+    if (event == "prev") {
+        registerStep--;
+    }
     document.getElementById("step-"+registerStep).style.display = "block";
 }
+
+
+
+
 
 
 
