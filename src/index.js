@@ -146,6 +146,7 @@ document.querySelectorAll('.form-incription').forEach(item => {
   })
 })
 
+//Gestion des étapes suite et gestion des différents champs d'incription
 function watchStep(event){
     document.getElementById("step-"+registerStep).style.display = "none";
     if (registerStep == 4) {

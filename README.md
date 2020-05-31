@@ -5,5 +5,7 @@ Lien vers les maquettes `Figma` : [Maquettes Locaw](https://www.figma.com/file/J
 
 
 Lien `Netlify` : [Locaw](https://silly-neumann-17dc8b.netlify.com/)
+`Identifiant de base` : hello@lp.wd
+`Mot de passe de base` : qwerty
 
 *Creator Maxime CAVERIVIERE*
