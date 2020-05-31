@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Location de véhicules de service 100% en ligne !">
+		<meta name="theme-color" content="#18CFAE">
 		<title>Locaw - Location de véhicules de service 100% en ligne !</title>
 	</head>
 	<body>
@@ -11,25 +12,74 @@
 		<main>
 			<img src="./img/logo.svg" class="logo" alt="Logo Locaw">
 
+
+
+
 			<section class="connexion">
 				<p class="slogan">Location de véhicules de service <br> <strong>100% en ligne !</strong><br><em></em></p>
-				<label>
-					<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
-					<input type="text" name="identifiant_co" onfocus="focus(this)">
-					<p>identifiant</p>
-				</label>
-				<label>
-					<img src="./img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
-					<img src="./img/yeux-open.svg" class="show-mp" id="show-mp-1" alt="Pictogramme voir le mot de passe">
-					<img src="./img/yeux-close.svg" class="show-mp active" id="show-mp-2" alt="Pictogramme masquer le mot de passe">
-					<input type="password" name="password_co">
-					<p>mot de passe</p>
-				</label>
-				<button type="submit">
-					Connexion
-				</button>
-				<a href="">Incription</a>
+
+				<form id="login">
+
+					<label>
+						<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
+						<input type="text" name="identifiant_co" onfocus="focus(this)" required title="Entrez votre identifiant" autocomplete="off">
+						<p>identifiant</p>
+					</label>
+
+					<label>
+						<img src="./img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
+						<img src="./img/yeux-open.svg" class="show-mp" id="show-mp-1" alt="Pictogramme voir le mot de passe">
+						<img src="./img/yeux-close.svg" class="show-mp active" id="show-mp-2" alt="Pictogramme masquer le mot de passe">
+						<input type="password" name="password_co" required title="Entrez votre mot de passe" autocomplete="off">
+						<p>mot de passe</p>
+					</label>
+
+					<button type="submit">
+						Connexion
+					</button>
+
+				</form>
+
+				<a id="register">Incription</a>
+
 			</section>
+
+			<div class="modal" id="modalRegister">
+			  
+			  <div class="modal-content">
+			    <span class="close">&times;</span>
+
+			    <div class="step-incription" id="step-1">
+			    	<label>
+						<input type="text" name="name_re" onfocus="focus(this)" required title="Entrez votre nom" autocomplete="off">
+						<p>Votre nom</p>
+					</label>
+					<label>
+						<input type="text" name="lastname_re" onfocus="focus(this)" required title="Entrez votre prénom" autocomplete="off">
+						<p>Votre prénom</p>
+					</label>
+					<label>
+						<input type="text" name="adress_re" onfocus="focus(this)" required title="Entrez votre adresse complète" autocomplete="off">
+						<p>Votre adresse complète</p>
+					</label>
+			    	<span class="next">Next</span>
+			    </div>
+			    <div class="step-incription" id="step-2">
+			    	<label>
+						<input type="email" name="email_re" onfocus="focus(this)" required title="Entrez votre adresse email" autocomplete="off">
+						<p>Votre email</p>
+					</label>
+			    	<span class="prev">Prev</span>
+			    	<span class="next">Next</span>
+			    </div>
+			    <div class="step-incription" id="step-3">
+			    	Step 3
+			    	<span class="prev">Prev</span>
+			    </div>
+
+			  </div>
+
+			</div>
 
 			<section class="inscription">
 				<p class="slogan">Inscription</strong></p>
@@ -62,10 +112,6 @@
 			</section>
 
 		</main>
-
-		<footer>
-			v0.2 - © 2020 Maxime CAVERIVIERE (projet étudiant)
-		</footer>
 
 
 	</body>
