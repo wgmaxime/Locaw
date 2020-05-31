@@ -33,7 +33,6 @@ for (var i = 0; i < showMp.length; i++) {
     });
 }
 
-
 //Exercice moment
 
 // moment.locale('fr')  
@@ -53,6 +52,8 @@ const password = "qwerty";
 var newEmail = "";
 var newPassword = "";
 var finishRegister = false;
+var name;
+var lastname;
 
 /* -- */
 const onLoginSubmit = e => {
@@ -93,11 +94,16 @@ const processData = data => {
 }
 
 const errorMessage = () => {
-
+    alert("Tu t'es planté ! Recommence")
 }
 
 const sucessMessage = () => {
-    alert("Bravo vous êtes connecté")
+    if (finishRegister) {
+        alert("Bienvenue "+name+", tu es maintenant connecté !!!")
+    }else{
+        alert("Bravo vous êtes connecté avec le compte de test ! À vous de créez votre propre compte maintenant")
+    }
+    
 }
 
 /* -- */
@@ -134,13 +140,17 @@ document.querySelectorAll('.prev').forEach(item => {
   })
 })
 
+document.querySelectorAll('.form-incription').forEach(item => {
+  item.addEventListener('submit', event => {
+    event.preventDefault();
+  })
+})
+
 function watchStep(event){
     document.getElementById("step-"+registerStep).style.display = "none";
     if (registerStep == 4) {
         document.getElementById("modalRegister").style.display = "none";
         finishRegister = true;
-        console.log(newPassword)
-        console.log(newEmail)
     }
     if (registerStep == 3) {
         newEmail = document.querySelector("input[name='email_re']").value;
@@ -152,14 +162,14 @@ function watchStep(event){
     if (registerStep == 2) {
         var born = document.querySelector("input[name='born_re']").value;
         var job = document.querySelector("textarea[name='job_re']").value;
-        console.log(job)
         if (born != "" && job != "") {
             registerStep++;
         }
     }
     if (registerStep == 1) {
-        var name = document.querySelector("input[name='name_re']").value;
-        var lastname = document.querySelector("input[name='lastname_re']").value;
+
+        name = document.querySelector("input[name='name_re']").value;
+        lastname = document.querySelector("input[name='lastname_re']").value;
         var adress = document.querySelector("input[name='adress_re']").value;
         if (name != "" && lastname != "" && adress != "") {
             registerStep++;

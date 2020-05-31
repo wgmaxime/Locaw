@@ -9,23 +9,27 @@ section{display: flex; flex-direction: column; justify-content: center; align-it
 .slogan{margin-bottom: 35px; font-size: 20px; text-align: center;}
 .slogan strong{color: #18CFAE;}
 .slogan em{font-size: 12px;}
-label{display: flex;position: relative;margin: 15px 0; height: 55px; background-color: white;border: 1px solid #F7F7F7; box-sizing: border-box; box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.1);border-radius: 5px; width: 325px;}
+label{display: flex;position: relative;margin: 35px 0; height: 55px; background-color: white;border: 1px solid #F7F7F7; box-sizing: border-box; box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.1);border-radius: 5px; width: 325px;}
 label p{display: flex;position: absolute; left: 58px; pointer-events: none; color: #18CFAE; transition: 350ms ease;}
 label img{padding: 0 18px;}
 label input{width: -webkit-fill-available; outline: none; border: none;border-radius: 5px; font-size: 18px;}
-label input.active + p{transform: translateY(-34px); font-size: 13px; transform-origin: left top;}
+label input.active + p,
+label textarea.active + p{transform: translateY(-34px); font-size: 13px; transform-origin: left top;}
 label img.show-mp{position: absolute; right: 15px; top: 15px; transition: 100ms ease; opacity: 0; cursor: pointer; padding: 10px;}
 label img.show-mp.active{opacity: 1;}
 label img#y-open{top: 11px;}
 button{margin: 15px 0; height: 55px;border-radius: 5px; border:none; background-color: #18CFAE;width: 325px;color: #484343;font-size: 15px; outline: none; cursor: pointer;transition: 350ms ease; font-weight: bold;}
 button:hover{background-color:#15AA8F;}
 footer{position: fixed;bottom: 50px; left: 0; text-align: center; width: 100%; font-size: 13px; opacity: 0.7}
-
+textarea{width: 100%;}
 .inscription{display: none;}
-
+#register,
+.prev{cursor: pointer; transition: 350ms ease;}
+#register:hover,
+.prev:hover{color: #18CFAE;}
 
 .modal {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -44,9 +48,9 @@ footer{position: fixed;bottom: 50px; left: 0; text-align: center; width: 100%; f
   background-color: #fefefe;
   margin: auto;
   border-radius: 5px;
-  padding: 20px;
+  padding: 20px 40px;
   border: 1px solid #888;
-  width: 50%;
+  width: 45%;
 }
 
 /* The Close Button */
@@ -66,3 +70,7 @@ footer{position: fixed;bottom: 50px; left: 0; text-align: center; width: 100%; f
 
 .step-incription{display: none;}
 #step-1{display: block}
+
+.modal h2{margin-top: 10px; text-align: center;}
+.modal label{width: 100%;}
+.modal hr{margin-bottom: 40px;}

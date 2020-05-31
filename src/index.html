@@ -40,61 +40,78 @@
 
 				</form>
 
-				<a id="register">Incription</a>
+				<a id="register">+ Incription</a>
 
 			</section>
 
 			<div class="modal" id="modalRegister">
 			  
 			  <div class="modal-content">
-			    <span class="close">&times;</span>
 
+			  	<div class="modal-title">
+			  		<span class="close">&times;</span>
+			  		<h2>Nouvelle incription</h2>
+			  	</div>
+			  	<hr>
+			    
 			    <div class="step-incription" id="step-1">
-			    	<label>
-						<input type="text" name="name_re" onfocus="focus(this)" required title="Entrez votre nom" autocomplete="off" value="test">
-						<p>Votre nom</p>
-					</label>
-					<label>
-						<input type="text" name="lastname_re" onfocus="focus(this)" required title="Entrez votre prénom" autocomplete="off" value="test">
-						<p>Votre prénom</p>
-					</label>
-					<label>
-						<input type="text" name="adress_re" onfocus="focus(this)" required title="Entrez votre adresse complète" autocomplete="off">
-						<p>Votre adresse complète</p>
-					</label>
-					<button class="next">Étape suivante</button>
+			    	<form class="form-incription">
+				    	<label>
+				    		<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
+							<input type="text" name="name_re" onfocus="focus(this)" required title="Entrez votre nom" autocomplete="off">
+							<p>Votre nom</p>
+						</label>
+						<label>
+							<img src="./img/picto-identifiant.svg" alt="Pictogramme identifiant">
+							<input type="text" name="lastname_re" onfocus="focus(this)" required title="Entrez votre prénom" autocomplete="off">
+							<p>Votre prénom</p>
+						</label>
+						<label>
+							<img src="./img/picto-adress.svg" alt="Pictogramme adresse">
+							<input type="text" name="adress_re" onfocus="focus(this)" required title="Entrez votre adresse complète" autocomplete="off">
+							<p>Votre adresse complète</p>
+						</label>
+						<button class="next" type="submit">Étape suivante</button>
+					</form>
 			    </div>
 			    <div class="step-incription" id="step-2">
-			    	<label>
-						<input type="date" name="born_re" onfocus="focus(this)" required title="Entrez votre date de naisssance" autocomplete="off">
-						<p>Votre date de naissance</p>
-					</label>
-					<label>
-						<textarea name="job_re" onfocus="focus(this)" title="Décrivez nous votre profession" autocomplete="off"></textarea>
-						<p>Décrivez votre profession</p>
-					</label>
-			    	<span class="prev">Retour</span>
-			    	<button class="next">Étape suivante</button>
+			    	<form class="form-incription">
+				    	<label>
+				    		<img src="./img/picto-born.svg" alt="Pictogramme date">
+							<input type="date" name="born_re" onfocus="focus(this)" required title="Entrez votre date de naisssance" autocomplete="off" class="active">
+							<p>Votre date de naissance</p>
+						</label>
+						<label>
+							<img src="./img/picto-job.svg" alt="Pictogramme job">
+							<textarea name="job_re" onfocus="focus(this)" title="Décrivez nous votre profession" autocomplete="off" class="active"></textarea>
+							<p>Décrivez votre profession</p>
+						</label>
+				    	<span class="prev">Retour</span>
+				    	<button class="next" type="submit">Étape suivante</button>
+			    	</form>
 			    </div>
 			    <div class="step-incription" id="step-3">
-			    	<label>
-						<input type="email" name="email_re" onfocus="focus(this)" required title="Entrez votre adresse e-mail" autocomplete="off" value="test@test.fr">
-						<p>Votre email</p>
-					</label>
+			    	<form class="form-incription">
+				    	<label>
+				    		<img src="./img/picto-email.svg" alt="Pictogramme e-mail">
+							<input type="email" name="email_re" onfocus="focus(this)" required title="Entrez votre adresse e-mail" autocomplete="off">
+							<p>Votre email</p>
+						</label>
 
-					<label>
-						<img src="./img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
-						<img src="./img/yeux-open.svg" class="show-mp" id="show-mp-1" alt="Pictogramme voir le mot de passe">
-						<img src="./img/yeux-close.svg" class="show-mp active" id="show-mp-2" alt="Pictogramme masquer le mot de passe">
-						<input type="password" name="password_re" required title="Entrez votre mot de passe" autocomplete="off" value="test">
-						<p>mot de passe</p>
-					</label>
+						<label>
+							<img src="./img/picto-cadena.svg" alt="Pictogramme mot de passe"> 
+							<img src="./img/yeux-open.svg" class="show-mp" id="show-mp-1" alt="Pictogramme voir le mot de passe">
+							<img src="./img/yeux-close.svg" class="show-mp active" id="show-mp-2" alt="Pictogramme masquer le mot de passe">
+							<input type="password" name="password_re" required title="Entrez votre mot de passe" autocomplete="off">
+							<p>mot de passe</p>
+						</label>
 
-			    	<span class="prev">Retour</span>
-			    	<button class="next">S'incrire</button>
+				    	<span class="prev">Retour</span>
+				    	<button class="next" type="submit">S'inscrire</button>
+			    	</form>
 			    </div>
 			    <div class="step-incription" id="step-4">
-			    	<p>Bravo votre compte est crée vous pouvez mainteant vous connecter</p>
+			    	<p>Bravo votre compte est crée vous pouvez maintenant vous connecter avec votre e-mail comme identifiant</p>
 			    	<button class="next">Me connecter</button>
 			    </div>
 
