@@ -21,12 +21,12 @@ for (var i = 0; i < input.length; i++) {
 for (var i = 0; i < showMp.length; i++) {
     showMp[i].addEventListener('click', function(event) {
         if (event.target.nextSibling.nextSibling.getAttribute('type') == "password") {
-        	document.querySelector('#show-mp-1').classList.add('active')
-        	document.querySelector('#show-mp-2').classList.remove('active')
+        	document.querySelector('.show-mp-1').classList.add('active')
+        	document.querySelector('.show-mp-2').classList.remove('active')
         	event.target.nextSibling.nextSibling.setAttribute('type', 'text');
         }else{
-        	document.querySelector('#show-mp-2').classList.add('active')
-        	document.querySelector('#show-mp-1').classList.remove('active')
+        	document.querySelector('.show-mp-2').classList.add('active')
+        	document.querySelector('.show-mp-1').classList.remove('active')
         	event.target.nextSibling.nextSibling.setAttribute('type', 'password');
         }
         
